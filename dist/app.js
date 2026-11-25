@@ -23,7 +23,4 @@ document.querySelectorAll('.header nav a').forEach(a=>a.onclick=()=>{$('.header 
 $('#contact-form').onsubmit=e=>{e.preventDefault();const name=$('#name').value.trim();if(!name){$('#name').focus();return}window.open(wa(`Olá! Meu nome é ${name}. Tenho interesse em: ${$('#interest').value.toLowerCase()}. Podemos conversar?`),'_blank','noopener,noreferrer')};
 $('#year').textContent=new Date().getFullYear();
 $('#motion').onclick=()=>{const paused=document.body.classList.toggle('paused');$('#motion').setAttribute('aria-pressed',String(paused));$('#motion').textContent=paused?'Retomar movimento ▷':'Pausar movimento Ⅱ'};
-const sculpture=$('.sculpture'), inner=$('.sculpture-inner');let dragging=false,startX=0,rotation=0;
-function rotate(value){rotation=((value%360)+360)%360;inner.style.animation='none';inner.style.transform=`rotateX(12deg) rotateY(${rotation}deg) rotateZ(-12deg)`;sculpture.setAttribute('aria-valuenow',String(Math.round(rotation)))}
-sculpture.addEventListener('pointerdown',e=>{dragging=true;startX=e.clientX-rotation;sculpture.setPointerCapture(e.pointerId)});sculpture.addEventListener('pointermove',e=>{if(dragging)rotate(e.clientX-startX)});['pointerup','pointercancel'].forEach(type=>sculpture.addEventListener(type,()=>dragging=false));sculpture.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();rotate(rotation+(e.key==='ArrowRight'?15:-15))}});
 activate('ai');
