@@ -41,3 +41,23 @@
 @media(max-width:760px){:root{--text-body:16px;--text-label:14px;--text-control:15px}.hero-copy{min-height:710px}.hero-copy>p,.lab-heading>p,.experiment-copy>p,.service-list p,.method-steps p,.founder-copy>p,details p,.contact form>p{font-size:var(--text-body)}.micro,.section-head>.micro,.section-head>.micro:last-child,.hero-copy>.micro,.portrait-top .micro,.portrait-top .micro:last-child,.machine-header,.machine-header>span:last-child,.machine-footer,.machine-footer button,.hero-bottom,.scene-caption,.coordinate,.footer-bottom,.service-number,.method-steps article>span,.contact label,.contact-number,.demo-bar,.demo-label,.experiment-note,.demo .hint,.contact form small,.founder figcaption,.lab-tabs small,.node,.node b,.content-result>span,.mini-site>small,.mini-site>p,.web-controls{font-size:var(--text-label);line-height:1.6;letter-spacing:0}.header nav,.primary,.underlink,.founder .underlink,.lab-tabs button,.demo-action,.chat-choices button,.mini-reset,.content-controls select{font-size:var(--text-control)}.scene{min-height:560px}.machine-header,.machine-footer,.portrait-top{align-items:flex-start;flex-direction:column}.demo{margin:0 18px 18px}.scene-caption{bottom:18px}.node{padding:10px;gap:8px}.node span{font-size:20px}.n-ai{max-width:90%}.lab-tabs button>span{display:none}.lab-tabs small{width:100%}.contact form small{font-size:14px}.service-list article{grid-template-columns:55px minmax(0,1fr) 35px;gap:12px}.footer-bottom{align-items:flex-start;flex-direction:column}}
 /* Actual WebGL sculpture with volumetric geometry and lighting. */
 .sculpture{width:min(94%,560px);height:480px;top:47%;touch-action:pan-y;z-index:1}.sculpture canvas{display:block;width:100%;height:100%;position:absolute;inset:0}.sculpture .sculpture-inner{position:absolute;width:240px;height:240px;left:calc(50% - 120px);top:calc(50% - 120px)}.sculpture.webgl-ready .sculpture-inner{display:none}.connections{opacity:.3}.scene-grid{opacity:.5}@media(max-width:760px){.sculpture{height:420px;width:100%;top:46%}}
+/* Selected projects. */
+.portfolio{border-bottom:1px solid var(--line)}
+.portfolio-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin:44px 0 52px}
+.portfolio-heading h2{margin:0}
+.portfolio-heading>p{max-width:360px;font-size:var(--text-body);line-height:1.75;color:var(--text-muted)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.portfolio-image{display:block;overflow:hidden;background:#20241f;border:1px solid var(--line);aspect-ratio:1265/712}
+.portfolio-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.portfolio-image:hover img{transform:scale(1.025)}
+.portfolio-meta{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;margin-top:22px;font-size:12px;line-height:1.6;color:var(--text-muted)}
+.portfolio-project h3{font:500 clamp(30px,3vw,44px)/1.15 var(--display);letter-spacing:-.04em;margin:16px 0}
+.portfolio-project>p{font-size:var(--text-body);line-height:1.75;max-width:540px;color:var(--text-muted)}
+.portfolio-project .portfolio-delivery{font-size:14px;margin:18px 0 24px}
+.portfolio-project .underlink{display:inline-flex;gap:35px}
+.portfolio-invite{border-top:1px solid var(--line);margin-top:56px;padding-top:28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.portfolio-invite>p{font-size:var(--text-body);line-height:1.6;margin:0}
+.portfolio-invite .underlink{display:inline-flex;gap:28px}
+@media(max-width:1000px){.header nav{gap:22px}.portfolio-heading{align-items:flex-start;flex-direction:column;gap:20px}.portfolio-heading>p{max-width:560px;margin:0}}
+@media(max-width:760px){.portfolio-grid{grid-template-columns:1fr;gap:48px}.portfolio-heading{margin:30px 0}.portfolio-invite{align-items:flex-start;flex-direction:column}.portfolio-meta{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.portfolio-image img{transition:none}.portfolio-image:hover img{transform:none}}
